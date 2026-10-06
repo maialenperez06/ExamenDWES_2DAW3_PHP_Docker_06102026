@@ -38,7 +38,7 @@
                       <th>Teléfono</th><th>Email</th><th>Jornada</th><th>Idiomas</th></tr>";
  
             while ($fila = mysqli_fetch_assoc($resultado)) {
-                // Traducimos lo guardado en la base de datos a texto legible
+                
                 if ($fila['jornadaParcial'] == 1) {
                     $jornada = "Parcial";
                 } else {
