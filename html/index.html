@@ -1,8 +1,10 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+
         <title>Examen de Desarrollo web en entorno servidor</title>
         <link rel="stylesheet" type="text/css" href="../estilos/estilos.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="../imagenes/favicon.jpeg">
+        <link rel="icon type="image/png" sizes="32x32" href="../imagenes/favicon.jpeg">
     </head>
     <body>
         <h1>Centro de Ayuda al Empleo</h1>
@@ -10,8 +12,59 @@
         <button onclick="location.href='../php/tabla.php?tipo=soldadura'">Soldadura</button>
         <button onclick="location.href='../php/tabla.php?tipo=informatica'">Informática</button>
         <button onclick="location.href='../php/tabla.php?tipo=socio'">Asistencia Sociosanitaria</button>
-        <form action="../php/tabla.php" method="???">
-            <!-- Añade aquí todos los datos que te pido en el enunciado -->
-        <form>
+        <form action="../php/insertar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+    
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            <br>
+            <label for="dni">DNI:</label>
+            <input type="text" 
+                id="dni" 
+                name="dni" 
+                pattern="[0-9]{8}[A-Za-z]" 
+                maxlength="9" 
+                title="Debe introducir 8 números y 1 letra (ejemplo: 12345678Z)" 
+                required>
+            <br>
+            <label for="fechaNacimiento">Fecha nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            <br>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" 
+                id="telefono" 
+                name="telefono" 
+                pattern="[0-9]{9}" 
+                maxlength="9" 
+                inputmode="numeric"
+                title="Debe introducir exactamente 9 números sin espacios ni letras" 
+                required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" autocomplete="off" required>
+            <br>
+            <label>Profesión estudiada:</label>
+            <input type="radio" id="soldadura" name="tipo" value="soldadura" required>Soldadura
+            <input type="radio" id="informatica" name="tipo" value="informatica">Informática
+            <input type="radio" id="socio" name="tipo" value="socio">Asistencia Sociosanitaria
+          
+            <br>
+            <br>
+            <label>Jornada:</label>
+            <input type="radio" id="parcial" name="jornada" value="parcial" required>Parcial
+            <input type="radio" id="completa" name="jornada" value="completa">Completa
+
+            <br>
+ 
+            
+            <label>Idiomas:</label>
+            <input type="checkbox" id="euskera" name="check1" value="euskera">Euskera
+            <input type="checkbox" id="ingles" name="check2" value="ingles">Inglés
+            <br>
+
+            <input type="submit" value="Confirmar">
+        </form>
     </body>
 </html>

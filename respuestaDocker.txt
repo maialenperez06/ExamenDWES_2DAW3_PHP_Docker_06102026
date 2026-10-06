@@ -1,4 +1,8 @@
-// Responde a la pregunta sobre docker del enunciado
+docker run -d --name mi_web -p 8080:80 nginx
+
+Arranca en segundo plano (-d) un servidor web con la imagen nginx, poniendole el nombre mi_web (--name). Conecta el puerto 8080 del ordenador con el puerto 80 interno del contenedor (-p 8080:80) para acceder a la web desde tu navegador.
 
 
-// Bibiografía
+
+
+https://docs.docker.com/engine/containers/run/#general-form
